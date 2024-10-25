@@ -19,6 +19,7 @@ function connectAsClient(){
            
             rl.question("enter ur username",(username)=>{
                 ws.send(JSON.stringify({"set_username":username}))
+               
             })
 
             rl.on("line",(line)=>{
@@ -39,6 +40,10 @@ function connectAsClient(){
         
     }
 
+function getuser(){
+    
+    server.privateMsg();
+}
 const command=process.argv[2];
 
     switch (command){
